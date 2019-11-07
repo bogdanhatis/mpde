@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\bogdan.hatis\Desktop\WebSite1\MobilpayEncryptDecrypt.dll-->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <Prefer32Bit>false</Prefer32Bit>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <ProjectGuid>{F7D53248-CD9C-40AC-9A44-5CF1B33FEDC6}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Xml" />
+    <Reference Include="System" />
+    <Reference Include="System.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="JavaScience\Win32.cs" />
+    <Compile Include="JavaScience\CRYPT_KEY_PROV_INFO.cs" />
+    <Compile Include="JavaScience\CERT_NAME_BLOB.cs" />
+    <Compile Include="JavaScience\opensslkey.cs" />
+    <Compile Include="Mobilpay_Payment_ParamsCollection.cs" />
+    <Compile Include="Mobilpay_Payment_Request_Url.cs" />
+    <Compile Include="Mobilpay_Payment_Split_Destination.cs" />
+    <Compile Include="Mobilpay_Payment_Invoice_Item.cs" />
+    <Compile Include="Mobilpay_Payment_Split.cs" />
+    <Compile Include="Mobilpay_Recurrence.cs" />
+    <Compile Include="MobilpayDecrypt.cs" />
+    <Compile Include="Mobilpay_Payment_Request_Abstract.cs" />
+    <Compile Include="Mobilpay_Payment_Request_Card.cs" />
+    <Compile Include="Mobilpay_Payment_Request_Sms.cs" />
+    <Compile Include="Mobilpay_Payment_Error.cs" />
+    <Compile Include="Mobilpay_Payment_Address.cs" />
+    <Compile Include="Mobilpay_Payment_Exchange_RateCollection.cs" />
+    <Compile Include="Mobilpay_Payment_Exchange_Rate.cs" />
+    <Compile Include="Mobilpay_Payment_Params.cs" />
+    <Compile Include="Mobilpay_Payment_Confirm.cs" />
+    <Compile Include="Mobilpay_Payment_ItemCollection.cs" />
+    <Compile Include="Mobilpay_IssueInvoice.cs" />
+    <Compile Include="Mobilpay_Payment_Invoice.cs" />
+    <Compile Include="Mobilpay_Payment_Request_Contact_Info.cs" />
+    <Compile Include="MobilpayEncryptDecrypt.cs" />
+    <Compile Include="MobilpayEncrypt.cs" />
+    <Compile Include="Mobilpay_Payment_Instrument_Card.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\NuGet.Build.Tasks.Pack.5.3.1\build\NuGet.Build.Tasks.Pack.targets" Condition="Exists('packages\NuGet.Build.Tasks.Pack.5.3.1\build\NuGet.Build.Tasks.Pack.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\NuGet.Build.Tasks.Pack.5.3.1\build\NuGet.Build.Tasks.Pack.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\NuGet.Build.Tasks.Pack.5.3.1\build\NuGet.Build.Tasks.Pack.targets'))" />
+  </Target>
+</Project>

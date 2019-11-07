@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>MobilpayEncryptDecrypt</id>
+    <version>1.0.3</version>
+    <title>Mobil Pay Encrypt Decrypt</title>
+    <authors>Bogdan Hatis</authors>
+    <owners>Bogdan Hatis</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>MobilPay EncryptDecrypt for .net core and .net framework bigger than 4</description>
+    <releaseNotes>Create a package for .net core to work with mobil pay and netopia payment type.</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>.net core framework netopia mobilpay</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard1.6">
+        <dependency id="NETStandard.Library" version="1.6.0" />
+        <dependency id="Microsoft.AspNetCore.StaticFiles" version="1.0.0" />
+      </group>
+      <group targetFramework=".NETCore2.1">
+        <dependency id="Microsoft.AspNetCore.StaticFiles" version="2.2.0" />
+      </group>
+      <group targetFramework=".NETCore2.2">
+        <dependency id="Microsoft.AspNetCore.StaticFiles" version="2.2.0" />
+      </group>
+      <group targetFramework=".NETFramework4.7.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="lib\net472\MobilpayEncryptDecrypt.dll" target="lib\net472\MobilpayEncryptDecrypt.dll" />
+  </files>
+</package>
